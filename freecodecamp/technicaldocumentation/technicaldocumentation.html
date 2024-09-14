@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>What the doc?</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python</header>
+      <ul>
+        <li><a class="nav-link" href=#Python_need_to_know>Python need to know</a></li>
+        <li><a class="nav-link" href=#The_print_function>The print function</a></li>
+        <li><a class="nav-link" href=#Naming_Variables>Naming Variables</a></li>
+        <li><a class="nav-link" href=#Data_Types>Data Types</a></li>
+        <li><a class="nav-link" href=#For_and_While_loop>For and While loop</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <header>
+        <h1>Python</h1>
+        <p>An intro to python maybe</p>
+      </header>
+      <section id="Python_need_to_know" class="main-section">
+        <header>Python need to know</header>
+        <article>
+          <p>Here we will learn the 4 basic things we need to know to get started with python</p>
+          <code>print("Hello, world!")</code>
+          <p>*as shown above</p>
+          <ul>
+            <li>The print function*</li>
+            <li>Naming variables</li>
+            <li>Understanding and identifying data types</li>
+            <li>the for and while loop statments</li>
+          </ul>
+        </article>
+      </section>
+      <section id="The_print_function" class="main-section">
+        <header>The print function</header>
+        <p>Does exactly as the name suggests. Prints the given argument to the console.</p>
+        <code>print("Hello, world!")</code>
+        <code>output: Hello, world!</code>
+        <p>As you can see the sentence "Hello, world!" was printed to the console.</p>
+      </section>
+      <section id="Naming_Variables" class="main-section">
+        <header>Naming Variables</header>
+        <p>Naming variables uses a word as a container by assigning it a value with the assignment operator =</p>
+        <code>name = John  # name is the variable and John is the value assigned to it.
+
+          print(name)
+        </code>
+        <code>output: John</code>
+        <p>Here we use the variable as the print argument which then allows us to print "John".</p>
+      </section>
+      <section id="Data_Types" class="main-section">
+        <header>Data Types</header>
+        <p>Here are the basic data types.</p>
+        <ul>
+          <li>string</li>
+          <li>interger</li>
+          <li>float</li>
+        </ul>
+        <code>name = "John"  # a string value
+          number_int = 4  # An interger value or often refered to as int.
+          number_float = 4.2  # a float data type which is any number with a floating point decimal.
+        </code>
+        <p>There are many other data types but these are the basic ones you'll be working with.</p>
+      </section>
+      <section id="For_and_While_loop" class="main-section">
+        <header>For and While loop</header>
+        <p>The for and while loop are used to iterate over certain objects until the provided condition is false.</p>
+        <code>x = 10
+          for i in range(x):
+            print(i)
+        </code>
+        <code>output:
+          0
+          1
+          2
+          3
+          4
+          5
+          6
+          7
+          8
+          9</code>
+        <p>notice that we count starting at zero!</p>
+        <p>Here is the same output using the while loop instead</p>
+        <code>x = 0
+          while x < 10:
+          x += 1
+          print(x)
+        </code>
+        <code>output:
+          1
+          2
+          3
+          4
+          5
+          6
+          7
+          8
+          9
+          10
+        </code>
+      </section>
+    </main>
+  </body>
+</html>
