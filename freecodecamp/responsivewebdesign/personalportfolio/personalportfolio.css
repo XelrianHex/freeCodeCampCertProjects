@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: linear-gradient(darkslateblue, rgb(100, 90, 161));
+    color: black;
+    font-size: 16px;
+  }
+  
+  header {
+    margin-bottom: 0;
+  }
+  
+  #navbar {
+    position: fixed;
+    margin-bottom: 1vh;
+    border: 3px outset lightskyblue;
+    width: 140px;
+    background-color: cyan;
+
+  }
+  
+  #navbar a {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  #navbar a:hover {
+    color: red;
+  }
+  
+  #navbar a:active {
+    color: white;
+  }
+  
+  #navbar a:visited {
+    color: brown;
+  }
+  
+  h1 {
+    color: steelblue;
+    text-shadow: 2px 2px black;
+    margin: 5vh auto;
+    padding-top: 10vh;
+    text-decoration: underline darkslateblue;
+  }
+  
+  #welcome-section {
+    border: 10px double silver;
+    border-radius: 20%;
+    text-align: center;
+    width: 800px;
+    margin: 0 0 5vh 18vw;
+    height: 100%;
+  }
+  
+  #requiredh1 {
+    color: steelblue;
+    text-shadow: 1px 1px black;
+    margin: 1em 0 0 0;
+    padding: 0;
+  }
+  
+  #projects {
+    width: 200px;
+    height: 300px;
+    margin-top: -32vh;
+    font-size: 27px;
+    color: black;
+  }
+  
+  #projects a {
+    color: gold;
+  }
+  
+  #projects a:hover {
+    color: red;
+  }
+  
+  #projects a:active {
+    color: white;
+  }
+  
+  #projects a:visited {
+    color: brown;
+  }
+  
+  footer {
+    margin: 5vh 0 0;
+  }
+  
+  footer a {
+    color: goldenrod;
+    font-size: 22px;
+  }
+  
+  footer a:hover {
+    color: red;
+  }
+  
+  footer a:active {
+    color: white;
+  }
+  
+  footer a:visited {
+    color: darkblue;
+  }
+  
+  @media screen and (max-width: 500px) {
+    #welcome-section {
+        width: 200px;
+        height: 300px;
+        margin: 0 0 0 15em;
+    }
+
+    #projects {
+        margin-top: -11em;
+    }
+  }
+  

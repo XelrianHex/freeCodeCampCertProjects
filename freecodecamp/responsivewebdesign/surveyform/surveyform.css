@@ -1,0 +1,30 @@
+body {
+    background-color: #4a2f3f;
+    color: lightgray;
+    padding: 2rem;
+  }
+  
+  h1, p, h2 {
+    text-align: center;
+  }
+  
+  form {
+    margin: 0 auto;
+    width: 60vw;
+    min-width: 300px;
+    max-height: 500px;
+  }
+  
+  label {
+    display: block;
+    margin: 1em 0.5em 0.5em 1em;
+  }
+  
+  input, textarea { 
+    margin: 0 1em
+  }
+  
+  input[id="submit"]  {
+    display: block;
+    margin: 0 5em;
+  }

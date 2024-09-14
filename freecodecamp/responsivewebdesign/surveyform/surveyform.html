@@ -1,0 +1,42 @@
+<DOCTYPE html>
+    <html lang="en">
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="surveyform.css">
+    
+    <head>
+      <h1 id="title">Test Survey</h1>
+    <p id="description">We are running arbitrary test for testing purposes.</p>
+    </head>
+    
+    <body>
+      <h2>Survey Form</h2>
+      <hr>
+      <form id="survey-form">
+        <label id="name-label" for="name">Name <input placeholder="Tell us your name" id="name" type="text" required>
+        </label>
+    
+        <label id="email-label" for="email">Email <input id="email" type="email" placeholder="JohnDoe@email.com" required>
+        </label>
+    
+        <label id="number-label" for="number">Age <input id="number" type="number" min="3" max="2" placeholder="50">
+        </label>
+        <hr>
+        <legend>Left handed or Right handed?</legend>
+        <label id="left" for="lefty"><input checked value="lefty" id="lefty" name="hand-dominace" type="radio"> Lefty</label>
+        <label id="right" for="righty"><input value="righty" id="righty" name="hand-dominace" type="radio"> Right</label>
+        <hr3>Select your style</hr3>
+        <select id="dropdown">
+          <option>(select one)</option>
+          <option>Cool</option>
+          <option>Radiant</option>
+          <option>What style?</option>
+        </select>
+        <hr>
+        <legend>Select hours of sleep</legend>
+        <label for="1"><input id="1" type="checkbox" value="1">One</label>
+        <label for="1000"><input id="1000" type="checkbox" value="1000">1000</label>
+        <label for="area-of-text">Tell us your sleep expierence:<textarea id="area-of-text" placeholder="Describe your sleep expierence..."></textarea></label>
+        <input id="submit" type="submit" value="SEND IT!">
+      </form>
+    </body>
+    </html>
