@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: linear-gradient(lightsteelblue, darkslategray);
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  #heading {
+    text-align: center;
+    margin: 5vh auto;
+  }
+  
+  h1 {
+    color: darkslategray;
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  
+  p {
+    font-weight: bold;
+    margin-top: 2vh;
+  }
+  
+  hr {
+    border: 2px dashed gray;
+  }
+  
+  #results-div {
+    margin: 5vh auto;
+    border-radius: 50%;
+    height: 28%;
+    width: 37%;
+    padding: 10vh 1vw 0;
+    text-align: center;
+    border: 15px double lightgray;
+    background-color: darkslategray;
+    color: white;
+  }
+  
+  #validator {
+    height: 250px;
+    width: 350px;
+    margin: auto;
+    text-align: center;
+    padding: 5vh;
+    border: 8px ridge slategray;
+    background-color: lightslategray;
+  }
+  
+  label {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  input {
+    display: block;
+    margin: 5vh auto;
+    background-image: radial-gradient(silver, gray);
+    font-weight: bold;
+  }
+  
+  button {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+  }
+  
+  #check-btn {
+    margin-right: 5vw;
+    font-size: 12px;
+    padding: 1;
+    background-image: linear-gradient(peru, orange);
+    border: 3px outset pink;
+    color: white;
+  }
+  
+  #clear-btn {
+    background-image: linear-gradient(slategray, darkslategray);
+    border: 3px outset pink;
+    color: white;
+    padding: 1;
+  }
