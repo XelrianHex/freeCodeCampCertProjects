@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>PokeDex App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pokedex.css">
+  </head>
+  <body>
+    <div id="background">
+      <div id="pokeball">
+        <div id="center-line"></div>
+        <div id="innerball"></div>
+      </div>
+      <div id="search-box">
+        <label for="search-input">Search Pokedex</label>
+        <input id="search-input" required>
+        <button id="search-button">Search</button>
+      </div>
+      <h1 id="base-text">WHO'S THAT POKEMON?</h1>
+      <div id="stats-box">
+        <div id="name-id">
+          <span id="pokemon-name"></span>
+          <span id="pokemon-id"></span>
+        </div>
+        <div id="image"></div>
+        <div id="types"></div>
+        <div id="stats">
+          <p id="stat-title">BASE STATS</p>
+          <div class="stat-row">
+            <p>Weight:</p><span id="weight"></span>
+          </div>
+          <div class="stat-row">
+            <p>Height:</p><span id="height"></span>
+          </div>
+          <div class="stat-row">
+            <p>HP:</p><span id="hp"></span>
+          </div>
+          <div class="stat-row">
+            <p>Attack:</p><span id="attack"></span>
+          </div>
+          <div class="stat-row">
+            <p>Defense:</p><span id="defense"></span>
+          </div>
+          <div class="stat-row">
+            <p>Special-Attack:</p><span id="special-attack"></span>
+          </div>
+          <div class="stat-row">
+            <p>Special-Defense:</p><span id="special-defense"></span>
+          </div>
+          <div class="stat-row">
+            <p>Speed:</p><span id="speed"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="pokedex.js"></script>
+  </body>
+</html>
