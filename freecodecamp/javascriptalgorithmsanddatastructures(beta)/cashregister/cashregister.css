@@ -1,0 +1,101 @@
+* {
+    border-sizing: border-box;
+  }
+  
+  body {
+    background-color: #F5F5F5;
+  }
+  
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #E8F5E9;
+    font-weight: bold;
+    background-color: #4CAF50;
+  }
+  
+  #price {
+    margin-left: 3em;
+  }
+  
+  #cashier p {
+    margin-right: .5em;
+    padding-left: 1em;
+    background-color: #EAEAEA;
+    text-align: left;
+    font-size: 2em;
+  }
+  
+  #cashier label {
+    font-weight: bold;
+  }
+  
+  #purchase-btn {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    text-shadow: 1px 1px #E8F5E9;
+  }
+  
+  #cashier {
+    text-align: center;
+    margin: 0 auto;
+    padding: .5rem 0 2rem 1rem;
+    background-color: #C8E6C9;
+  }
+  
+  #menu {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .2em;
+    background-color: #C8E6C9;
+  }
+  
+  #menu button {
+    flex: 0 0 30%;
+    padding: 1em;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    text-shadow: .5px .5px #E8F5E9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  #change-due {
+    height: 14rem;
+    background-color: #C8E6C9;
+    margin: 0;
+  }
+  
+  #change-due p {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+    padding-top: 3em;
+  }
+  
+  #cid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    height: 10rem;
+    text-align: center;
+    background-color: #C8E6C9;
+    margin: 0;
+  }
+  
+  #cid span {
+    margin-top: 1em;
+    background-color: #4CAF50;
+    height: 1.5em;
+    text-align: center;
+    padding: .25em .5em 0;
+    border: 3px outset #C8E6C9;
+    color: #FFFFFF;
+    text-shadow: .5px .5px #E8F5E9;
+  }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register App</title>
+    <link rel="stylesheet" href="cashregister.css">
+</head>
+<body>
+  <h1>Hex Mart</h1>
+  
+  <div id="cashier">
+    <p>Price: <span id="price">1.87</span></p>
+    <label for="cash">Customer Paid:</label>
+    <input id="cash" type="number">
+    <button id="purchase-btn">Purchase</button>
+  </div>
+  
+  <div id="menu">
+    <button id="one" value="20.00"><span class="item">Charging Station</span> <strong>$20.00</strong></button>
+    <button id="two" value="11.95"><span class="item">Keto Rice Meal</span> <strong>$11.95</strong></button>
+    <button id="three" value="19.50"><span class="item">10 pack dark chocolate</span> <strong>$19.50</strong></button>
+    <button id="four" value="3.26"><span class="item">Chips</span> <strong>$3.26</strong></button>
+    <button id="five" value="18.74"><span class="item">Latest Hits CD</span> <strong>$18.74</strong></button>
+    <button id="six" value="120.00"><span class="item">VR Drone</span> <strong>$120.00</strong></button>
+    <button id="seven" value="2.72"><span class="item">Cola</span> <strong>$2.72</strong></button>
+    <button id="eight" value="50.00"><span class="item">Exercise Stuff</span> <strong>$50.00</strong></button>
+    <button id="nine" value="22.79"><span class="item">Drone Add On</span> <strong>$22.79</strong></button>
+    <button id="ten" value="1.00"><span class="item">Gum</span> <strong>$1.00</strong></button>
+  </div>
+
+  <div id="cid"></div>
+
+  <div id="change-due"></div>
+  
+  <script src="cashregister.js"></script>
+  </body>
+</html>
