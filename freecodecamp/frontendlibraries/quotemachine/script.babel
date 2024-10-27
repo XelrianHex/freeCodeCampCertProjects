@@ -1,0 +1,152 @@
+import React from "https://esm.sh/react";
+import ReactDOM from "https://esm.sh/react-dom";
+import { Provider, connect } from "https://esm.sh/react-redux";
+import {
+  createStore,
+  combineReducers,
+  applyMiddleware
+} from "https://esm.sh/redux";
+
+const quoteList = {
+  "The Lone Cowboy":
+    "Sorry for the long wait. An ostrich was on the loose and I forgot my lasso!",
+  "Stranger Danger": "It's out there! I'm telling you I seen it my self!!!",
+  "A Coworker": "That there is a one way trip to a permanet vacation!",
+  "He wouldn't say":
+    "The leaves!!! They speak to me, and nothing they say is ever good...",
+  "The wise man":
+    "He didn't actually say anything. I think the silence speaks for it self."
+};
+
+// Redux
+const UPDATE = "UPDATE";
+
+const randomQuote = () => {
+  const keys = Object.keys(quoteList);
+  const randomIndex = Math.floor(Math.random() * keys.length);
+  const author = keys[randomIndex];
+  const quote = quoteList[author];
+  return { author, quote };
+};
+
+const quoteAction = () => {
+  const { author, quote } = randomQuote();
+  return {
+    type: UPDATE,
+    author,
+    quote
+  };
+};
+
+const initialState = {
+  author: "Who will it be?",
+  quote: "Click to see a quote."
+};
+
+const quoteReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case UPDATE:
+      return { ...state, author: action.author, quote: action.quote };
+    default:
+      return state;
+  }
+};
+
+const store = createStore(quoteReducer);
+
+// React
+class QuoteBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    const { dispatch } = this.props;
+    dispatch(quoteAction());
+  }
+
+  render() {
+    return (
+      <div id="quote-box">
+        <ConnectedQuote />
+        <NewQuote onClick={this.handleClick} />
+        <Links />
+      </div>
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  author: state.author,
+  quote: state.quote
+});
+
+const ConnectedQuoteBox = connect(mapStateToProps)(QuoteBox);
+
+const Quote = ({ author, quote }) => {
+  return (
+    <blockquote id="text">
+      <p>{quote}</p>
+      <footer id="author">
+        <cite>{author}</cite>
+      </footer>
+    </blockquote>
+  );
+};
+
+const mapStateToQuoteProps = (state) => ({
+  author: state.author,
+  quote: state.quote
+});
+
+const ConnectedQuote = connect(mapStateToQuoteProps)(Quote);
+
+const NewQuote = ({ onClick }) => {
+  return (
+    <button id="new-quote" className="btn-block btn-info" onClick={onClick}>
+      New Quote
+    </button>
+  );
+};
+
+const Links = () => {
+  return (
+    <footer id="links">
+      <a
+        id="tweet-quote"
+        title="Tweet Tweet"
+        href="twitter.com/intent/tweet"
+        target="_blank"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="50"
+          height="50"
+        >
+          <path
+            d="M23.953 4.57c-.885.392-1.83.654-2.825.775a4.935 4.935 0 0 0 2.163-2.723c-.95.56-2.005.975-3.127 1.197a4.92 4.92 0 0 0-8.38 4.482A13.94 13.94 0 0 1 1.671 3.149a4.92 4.92 0 0 0 1.523 6.573c-.885-.027-1.718-.27-2.448-.675v.067a4.922 4.922 0 0 0 3.946 4.827c-.7.191-1.44.222-2.165.082a4.935 4.935 0 0 0 4.604 3.417A9.868 9.868 0 0 1 .96 19.16a13.936 13.936 0 0 0 7.548 2.209c9.056 0 14.008-7.497 14.008-13.986 0-.213 0-.426-.015-.637A10.005 10.005 0 0 0 24 4.59a9.882 9.882 0 0 1-2.825.775 4.922 4.922 0 0 0 2.16-2.723z"
+            fill="#1DA1F2"
+            stroke="#000"
+            stroke-width="1"
+          />
+        </svg>
+      </a>
+      <a
+        id="fcc"
+        title="Xelrian's FCC profile"
+        href="www.freecodecamp.org/xelrian"
+        target="_blank"
+      >
+        Xelrian
+      </a>
+    </footer>
+  );
+};
+
+ReactDOM.render(
+  <Provider store={store}>
+    <ConnectedQuoteBox />
+  </Provider>,
+  document.getElementById("root")
+);
